@@ -1,0 +1,32 @@
+# Dependencies and web build output
+node_modules/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Android build output and local config (the android/ folder has its own .gitignore too)
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/capture/
+android/captures/
+*.apk
+*.aab
+
+# Signing keys - never commit these
+*.jks
+*.keystore

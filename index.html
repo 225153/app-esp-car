@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ESP Car</title>
+  </head>
+  <body>
+    <main>
+      <h1>ESP32 Web Robot Car</h1>
+      <div id="status" class="bad">NO CONNECTION</div>
+
+      <section class="dpad">
+        <button class="hold up" data-dir="f">Forward</button>
+        <button class="hold left" data-dir="l">Left</button>
+        <button id="stop" class="stop">Stop</button>
+        <button class="hold right" data-dir="r">Right</button>
+        <button class="hold down" data-dir="b">Backward</button>
+      </section>
+
+      <section class="voice">
+        <button id="mic" class="mic" aria-label="Microphone">🎤</button>
+        <div id="heard">Heard: -</div>
+        <div id="reply">ESP32: -</div>
+        <div class="hint">forward 15, right 30, then forward 10, stop</div>
+        <div class="row">
+          <select id="lang">
+            <option value="en-US">English</option>
+            <option value="fr-FR">Français</option>
+          </select>
+          <label><input type="checkbox" id="keep" /> Keep listening</label>
+        </div>
+        <div id="error" class="error"></div>
+      </section>
+
+      <section class="settings">
+        <label>ESP32 IP <input id="ip" type="text" inputmode="decimal" value="192.168.4.1" /></label>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
